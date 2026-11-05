@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { ArrowUpRight, Code2, MapPin, PenTool, Sparkles } from "lucide-react"
 import Link from "next/link"
+import { ProfilePhoto } from "@/components/ui/profile-photo"
 import { ContactCta } from "@/components/sections/contact-cta"
 import { TechStack } from "@/components/sections/tech-stack"
 
@@ -35,9 +36,15 @@ export default function AboutPage() {
             </p>
             <div className="about-location"><MapPin aria-hidden="true" size={15} /> Nairobi, Kenya</div>
           </div>
-          <div className="about-page-art" role="img" aria-label="Abstract graphic composition with a PN monogram, interface panels, and the words design thinking and frontend engineering">
-            <div className="about-page-art-orb" />
-            <div className="about-page-art-panel">
+          <div className="about-page-art">
+            <ProfilePhoto
+              className="about-page-photo"
+              alt="Paul Njeru standing indoors beside a staircase, shown in a full-length portrait"
+              sizes="(max-width: 850px) 90vw, 33vw"
+            />
+            <div className="about-page-art-shade" aria-hidden="true" />
+            <div className="about-page-art-orb" aria-hidden="true" />
+            <div className="about-page-art-panel" aria-hidden="true">
               <span className="about-art-index">PAUL NJERU · DIGITAL PRACTICE</span>
               <span className="about-page-monogram">PN<span>.</span></span>
               <div className="about-page-art-bottom">

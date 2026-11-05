@@ -1,6 +1,7 @@
 "use client"
 
 import { ArrowUpRight, Menu, X } from "lucide-react"
+import { ProfilePhoto } from "@/components/ui/profile-photo"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
@@ -32,8 +33,8 @@ export function SiteHeader() {
             aria-label="Paul Njeru, home"
             onClick={closeMenu}
           >
-            <span className="brand-monogram" aria-hidden="true">
-              PN
+            <span className="brand-photo" aria-hidden="true">
+              <ProfilePhoto className="brand-photo-image" alt="" sizes="40px" />
             </span>
             <span className="brand-name">
               <span>Paul</span>

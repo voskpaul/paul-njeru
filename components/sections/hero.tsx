@@ -45,6 +45,8 @@ export function Hero() {
         <div className="hero-art" aria-hidden="true">
           <div className="hero-orbit hero-orbit--one" />
           <div className="hero-orbit hero-orbit--two" />
+          <span className="hero-spark hero-spark--one" />
+          <span className="hero-spark hero-spark--two" />
           <div className="hero-code-card">
             <span className="code-card-label">A little structure</span>
             <code><span>const</span> idea = <b>&quot;make it useful&quot;</b>;</code>
@@ -85,6 +87,7 @@ export function Hero() {
                 <span>NAIROBI · WORLDWIDE</span>
               </div>
             </div>
+            <span className="hero-browser-scan" />
           </div>
           {floatingTech.map((label, index) => (
             <span className={`floating-tech floating-tech--${index + 1}`} key={label}>

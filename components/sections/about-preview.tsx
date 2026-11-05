@@ -1,14 +1,21 @@
 import { ArrowUpRight, Code2, PenTool } from "lucide-react"
 import Link from "next/link"
+import { ProfilePhoto } from "@/components/ui/profile-photo"
 import { SectionHeading } from "@/components/sections/section-heading"
 
 export function AboutPreview() {
   return (
     <section className="section section-about-preview" aria-labelledby="about-preview-title">
       <div className="container about-preview-grid">
-        <div className="about-art" role="img" aria-label="Abstract monogram and interface composition representing Paul Njeru's design and engineering practice">
-          <div className="about-art-glow" />
-          <div className="about-art-frame">
+        <div className="about-art">
+          <ProfilePhoto
+            className="about-photo"
+            alt="Paul Njeru standing indoors in a white shirt and patterned trousers"
+            sizes="(max-width: 850px) 90vw, 46vw"
+          />
+          <div className="about-art-photo-overlay" aria-hidden="true" />
+          <div className="about-art-glow" aria-hidden="true" />
+          <div className="about-art-frame" aria-hidden="true">
             <span className="about-art-index">NAIROBI, KE · 2026</span>
             <span className="about-art-monogram">PN<span>.</span></span>
             <div className="about-art-caption">

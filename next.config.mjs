@@ -2,6 +2,13 @@
 const nextConfig = {
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "hebbkx1anhila5yf.public.blob.vercel-storage.com",
+        pathname: "/myself-3YO9llTuXHkZO6H8T7l96jWIXggMFQ.jpg",
+      },
+    ],
   },
   async headers() {
     return [
