@@ -18,7 +18,7 @@ export function WhyMe() {
         </div>
         <div className="reasons-list">
           {reasons.map(({ number, title, description, icon: Icon }) => (
-            <article className="reason-row" key={number}>
+            <article className="reason-row reveal-on-scroll" key={number}>
               <span className="reason-number">{number}</span>
               <span className="reason-icon"><Icon aria-hidden="true" size={19} strokeWidth={1.7} /></span>
               <div>

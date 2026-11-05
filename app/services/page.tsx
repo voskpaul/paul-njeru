@@ -45,7 +45,7 @@ export default function ServicesPage() {
           />
           <div className="service-detail-grid">
             {services.map(({ number, title, description, includes, icon: Icon }) => (
-              <article className="service-detail-card" key={number}>
+              <article className="service-detail-card reveal-on-scroll" key={number}>
                 <div className="service-detail-top">
                   <span className="service-number">{number}</span>
                   <span className="service-icon"><Icon aria-hidden="true" size={21} strokeWidth={1.7} /></span>

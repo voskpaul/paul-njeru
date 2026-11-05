@@ -19,7 +19,7 @@ export function ServicesOverview() {
         </div>
         <div className="services-grid services-grid--home">
           {services.map(({ number, title, description, icon: Icon }) => (
-            <article className="service-card" key={number}>
+            <article className="service-card reveal-on-scroll" key={number}>
               <div className="service-card-top">
                 <span className="service-number">{number}</span>
                 <span className="service-icon"><Icon aria-hidden="true" size={20} strokeWidth={1.7} /></span>

@@ -12,7 +12,7 @@ export function ProjectCard({
   featured?: boolean
 }) {
   return (
-    <article className={`project-card${featured ? " project-card--featured" : ""}`}>
+    <article className={`project-card reveal-on-scroll${featured ? " project-card--featured" : ""}`}>
       <div className="project-card-media">
         <ProjectVisual project={project} />
         <span className="project-card-index">{String(index + 1).padStart(2, "0")}</span>

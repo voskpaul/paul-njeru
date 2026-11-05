@@ -17,7 +17,7 @@ export function ProcessSection() {
         </div>
         <ol className="process-timeline">
           {processSteps.map((step) => (
-            <li className="process-step" key={step.number}>
+            <li className="process-step reveal-on-scroll" key={step.number}>
               <span className="process-step-number">{step.number}</span>
               <span className="process-step-node" aria-hidden="true" />
               <h3>{step.title}</h3>

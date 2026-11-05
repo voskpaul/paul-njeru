@@ -3535,8 +3535,8 @@ textarea:focus-visible {
   }
 
   @keyframes reveal-on-entry {
-    from { opacity: 0.15; transform: translateY(24px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0.15; translate: 0 24px; }
+    to { opacity: 1; translate: 0 0; }
   }
 }
 

@@ -17,7 +17,7 @@ export function TechStack() {
           {technologyGroups.map((group, index) => {
             const Icon = groupIcons[index]
             return (
-              <article className="tech-group" key={group.title}>
+              <article className="tech-group reveal-on-scroll" key={group.title}>
                 <div className="tech-group-title">
                   <span className="tech-icon"><Icon aria-hidden="true" size={18} strokeWidth={1.7} /></span>
                   <h3>{group.title}</h3>
