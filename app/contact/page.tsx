@@ -22,15 +22,24 @@ export default function ContactPage() {
             <p className="page-eyebrow"><span /> Start a conversation</p>
             <h1 id="contact-page-title">Have a project<br /><em>in mind?</em></h1>
             <p className="page-hero-description">
-              Tell me what you&apos;re building, what challenges you&apos;re facing, or what you want your website to achieve. Let&apos;s discuss how I can help.
+              Tell me what you&apos;re building and let&apos;s discuss how I can help bring your idea to life.
             </p>
           </div>
           <div className="contact-hero-note">
             <span className="contact-hero-note-icon"><MessageCircle aria-hidden="true" size={20} /></span>
-            <p>The easiest way to get started</p>
-            <a href={contactDetails.phoneLink} target="_blank" rel="noopener noreferrer">
-              Chat with me on WhatsApp <ArrowUpRight aria-hidden="true" size={15} />
-            </a>
+            <p>Prefer to reach me directly?</p>
+            <div className="contact-hero-actions">
+              <a className="button button--gradient" href={contactDetails.phoneLink} target="_blank" rel="noopener noreferrer">
+                <MessageCircle aria-hidden="true" size={16} />
+                Chat on WhatsApp
+                <ArrowUpRight aria-hidden="true" size={15} />
+              </a>
+              <a className="button button--ghost" href={`mailto:${contactDetails.email}`}>
+                <Mail aria-hidden="true" size={16} />
+                Send Me an Email
+                <ArrowUpRight aria-hidden="true" size={15} />
+              </a>
+            </div>
           </div>
         </div>
       </section>

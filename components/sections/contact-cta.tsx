@@ -11,7 +11,7 @@ export function ContactCta() {
           <div className="contact-cta-copy">
             <p className="section-eyebrow section-eyebrow--light">Have a project in mind?</p>
             <h2 id="contact-cta-title">Let&apos;s make your next idea <span>matter.</span></h2>
-            <p>Tell me what you&apos;re building, what challenge you&apos;re facing, or what you want your website to achieve.</p>
+            <p>Tell me what you&apos;re building and let&apos;s discuss how I can help bring your idea to life.</p>
           </div>
           <div className="contact-cta-actions">
             <Link className="button button--light" href="/contact">

@@ -1,9 +1,9 @@
 import type { Metadata } from "next"
-import { ArrowRight, ArrowUpRight, Check } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { ContactCta } from "@/components/sections/contact-cta"
 import { SectionHeading } from "@/components/sections/section-heading"
-import { services } from "@/lib/site-content"
+import { ServiceDetailList } from "@/components/sections/service-detail-list"
 
 export const metadata: Metadata = {
   title: "Services",
@@ -43,26 +43,7 @@ export default function ServicesPage() {
             title={<span id="service-list-title">A good fit for your next step<span className="heading-period">.</span></span>}
             description="Choose a focused deliverable or bring me in to help shape the experience from the beginning."
           />
-          <div className="service-detail-grid">
-            {services.map(({ number, title, description, includes, icon: Icon }) => (
-              <article className="service-detail-card reveal-on-scroll" key={number}>
-                <div className="service-detail-top">
-                  <span className="service-number">{number}</span>
-                  <span className="service-icon"><Icon aria-hidden="true" size={21} strokeWidth={1.7} /></span>
-                </div>
-                <h2>{title}</h2>
-                <p className="service-detail-description">{description}</p>
-                <ul className="service-includes">
-                  {includes.map((item) => (
-                    <li key={item}><Check aria-hidden="true" size={15} />{item}</li>
-                  ))}
-                </ul>
-                <Link className="service-link" href="/contact">
-                  Discuss a project <ArrowUpRight aria-hidden="true" size={15} />
-                </Link>
-              </article>
-            ))}
-          </div>
+          <ServiceDetailList />
         </div>
       </section>
       <ContactCta />

@@ -14,7 +14,7 @@ export const capabilities = [
   { label: "Frontend engineering", icon: Code2 },
   { label: "SaaS development", icon: LayoutDashboard },
   { label: "Responsive web design", icon: MonitorSmartphone },
-  { label: "API integration", icon: Plug },
+  { label: "API integrations", icon: Plug },
 ]
 
 export type Service = {
@@ -41,7 +41,7 @@ export const services: Service[] = [
   },
   {
     number: "02",
-    title: "UI/UX design & frontend implementation",
+    title: "UI/UX design & Figma-to-React implementation",
     description:
       "Clean, intuitive interfaces designed around real users and transformed into responsive, functional web experiences.",
     includes: [

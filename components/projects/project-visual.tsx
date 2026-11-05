@@ -31,7 +31,7 @@ const visualCopy: Record<Exclude<ProjectVisualKind, "algorithm">, { brand: strin
     action: "Open workspace",
   },
   creator: {
-    brand: "CLIPWIZARD",
+    brand: "LUMORA AI / CLIPWIZARD",
     eyebrow: "YOUR CREATIVE STUDIO",
     headline: "Give your next idea a frame.",
     note: "A concept for a modern video workflow.",
@@ -139,7 +139,7 @@ export function ProjectVisual({ project }: { project: PortfolioProject }) {
       <div className="concept-browser" aria-hidden="true">
         <div className="concept-browser-bar">
           <span className="concept-browser-dots"><i /><i /><i /></span>
-          <span className="concept-browser-address">{project.name.toLowerCase().replaceAll(" ", "-")}.site</span>
+          <span className="concept-browser-address">{project.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}.site</span>
           <span className="concept-browser-more">•••</span>
         </div>
         <div className="concept-page">

@@ -1,4 +1,7 @@
+"use client"
+
 import { ArrowRight, ArrowUpRight } from "lucide-react"
+import { motion, useReducedMotion } from "motion/react"
 import type { PortfolioProject } from "@/lib/projects"
 import { ProjectVisual } from "@/components/projects/project-visual"
 
@@ -11,8 +14,17 @@ export function ProjectCard({
   index: number
   featured?: boolean
 }) {
+  const prefersReducedMotion = useReducedMotion() ?? false
+
   return (
-    <article className={`project-card reveal-on-scroll${featured ? " project-card--featured" : ""}`}>
+    <motion.article
+      className={`project-card${featured ? " project-card--featured" : ""}`}
+      initial={prefersReducedMotion ? false : { opacity: 0, y: 28 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.12 }}
+      transition={{ duration: prefersReducedMotion ? 0 : 0.68, delay: prefersReducedMotion ? 0 : Math.min(index * 0.075, 0.35), ease: "easeOut" }}
+      whileHover={prefersReducedMotion ? undefined : { y: -5, transition: { duration: 0.22 } }}
+    >
       <div className="project-card-media">
         <ProjectVisual project={project} />
         <span className="project-card-index">{String(index + 1).padStart(2, "0")}</span>
@@ -44,6 +56,6 @@ export function ProjectCard({
           ))}
         </div>
       </div>
-    </article>
+    </motion.article>
   )
 }

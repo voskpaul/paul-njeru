@@ -90,7 +90,7 @@ export const projects: PortfolioProject[] = [
   },
   {
     id: "clipwizard",
-    name: "ClipWizard",
+    name: "Lumora AI / ClipWizard",
     category: "AI video creation / SaaS product",
     description:
       "An AI video creation product concept exploring modern SaaS interfaces and creative workflows for generating and editing video content.",
@@ -130,11 +130,10 @@ export const projects: PortfolioProject[] = [
 export const selectedProjectIds = [
   "saffron-stone",
   "havenstone-properties",
-  "vizify",
   "clipwizard",
-  "algorithm-visualizer",
+  "vizify",
 ]
 
-export const selectedProjects = projects.filter((project) =>
-  selectedProjectIds.includes(project.id),
-)
+export const selectedProjects = selectedProjectIds
+  .map((id) => projects.find((project) => project.id === id))
+  .filter((project): project is PortfolioProject => project !== undefined)
