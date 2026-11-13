@@ -26,7 +26,7 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "hebbkx1anhila5yf.public.blob.vercel-storage.com",
-        pathname: "/Screenshot%20%28447%29-vGPKHYjnRSOLrf8grpBWxQT1uyCtEn.png",
+        pathname: "/Screenshot%20%28447%29-k4PdjznTHrQmdA9jCaMHQZpLuNzTJ7.png",
       },
       {
         protocol: "https",
