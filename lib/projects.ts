@@ -3,6 +3,7 @@ export type ProjectVisualKind =
   | "real-estate"
   | "hospitality"
   | "dashboard"
+  | "ux-booster"
   | "creator"
   | "algorithm"
   | "commerce"
@@ -21,6 +22,7 @@ export type PortfolioProject = {
   visual: ProjectVisualKind
   tech: string[]
   image?: string
+  imageFallback?: string
   imageAlt?: string
   previewLabel?: string
   statusLabel: string
@@ -58,6 +60,10 @@ export const projects: PortfolioProject[] = [
     href: "https://havenstone-qdbggg5sa-voskpauls-projects.vercel.app/",
     visual: "real-estate",
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Responsive Design"],
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%20%28447%29-k4PdjznTHrQmdA9jCaMHQZpLuNzTJ7.png",
+    imageFallback: "/projects/havenstone-properties.png",
+    imageAlt: "Havenstone Properties homepage screenshot with a serif Find your place in Nairobi headline and a jacaranda-framed contemporary residence",
+    previewLabel: "Captured visual showcase",
     statusLabel: "Website concept",
   },
   {
@@ -69,7 +75,26 @@ export const projects: PortfolioProject[] = [
     href: "https://embu-luxe-stays-4pia094v0-voskpauls-projects.vercel.app/",
     visual: "hospitality",
     tech: [],
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%20%28446%29-M251iWfpqvnBah0Fg1DWlYmgzLXTsD.png",
+    imageFallback: "/projects/embu-luxe-stays.png",
+    imageAlt: "LuxeLink Embu hospitality homepage screenshot with a mountain-view villa, enquiry buttons, and stay search controls",
+    previewLabel: "Captured visual showcase",
     statusLabel: "Website concept",
+  },
+  {
+    id: "ux-booster",
+    name: "UXBooster",
+    category: "UX productivity dashboard / web application",
+    description:
+      "A UX-focused product dashboard project, linked directly to its deployed dashboard route.",
+    href: "https://uxbooster-pdtv1kj33-voskpauls-projects.vercel.app/dashboard",
+    visual: "ux-booster",
+    tech: [],
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%20%28444%29-YHDMLqdhhsxVnKJszrTYNozgWZQ66I.png",
+    imageFallback: "/projects/uxbooster-dashboard.png",
+    imageAlt: "UXBooster analytics dashboard screenshot showing a dark workspace with navigation, summary metrics, a user activity chart, and traffic sources",
+    previewLabel: "Captured visual showcase",
+    statusLabel: "Access-protected deployment",
   },
   {
     id: "vizify",
@@ -80,6 +105,10 @@ export const projects: PortfolioProject[] = [
     href: "https://v0-vizify-6rbh0akhy-voskpauls-projects.vercel.app/",
     visual: "dashboard",
     tech: [],
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%20%28445%29-EMhUHbP1irbulK5ovOoI9bpXOArpyP.png",
+    imageFallback: "/projects/vizify.png",
+    imageAlt: "Dark ResearchAI-branded interface screenshot supplied for the Vizify project, with an AI research headline and purple calls to action",
+    previewLabel: "Captured visual showcase",
     statusLabel: "Product interface concept",
     additionalLinks: [
       {
@@ -97,6 +126,10 @@ export const projects: PortfolioProject[] = [
     href: "https://v0-clipwizard-app-requirements-efh3ooyzv-voskpauls-projects.vercel.app/",
     visual: "creator",
     tech: [],
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%20%28448%29-QUxj7ErJB4kRgcHNSJUL3PphCzjlYo.png",
+    imageFallback: "/projects/clipwizard.png",
+    imageAlt: "ClipWizard video creation homepage screenshot with a dark product hero, gradient headline, and video-generation call to action",
+    previewLabel: "Captured visual showcase",
     statusLabel: "SaaS product concept",
   },
   {
@@ -111,7 +144,7 @@ export const projects: PortfolioProject[] = [
     image: "/projects/algorithm-visualizer.png",
     imageAlt:
       "Live capture of the Algorithm Visualizer interface with algorithm selection and step controls",
-    previewLabel: "Live project capture",
+    previewLabel: "Captured visual showcase",
     statusLabel: "Interactive demo",
   },
   {
@@ -123,6 +156,10 @@ export const projects: PortfolioProject[] = [
     href: "https://audiophile-seven.vercel.app/",
     visual: "commerce",
     tech: [],
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%20%28449%29-QQEfCx4jfcpUGNpKHiJKq604WDsXlY.png",
+    imageFallback: "/projects/audiophile.png",
+    imageAlt: "Audiophile storefront screenshot with a dark XX99 Mark II headphones product hero and product navigation",
+    previewLabel: "Captured visual showcase",
     statusLabel: "Frontend concept",
   },
 ]

@@ -29,7 +29,7 @@ export default function WorkPage() {
             <a className="page-scroll-link" href="#all-projects">Explore the projects <ArrowDown aria-hidden="true" size={15} /></a>
           </div>
           <div className="page-hero-note">
-            <span className="page-hero-note-index">01 — 07</span>
+            <span className="page-hero-note-index">01 — 08</span>
             <p>A collection of business website concepts, SaaS interfaces, and frontend experiments.</p>
             <span className="page-hero-note-rule" />
             <span className="page-hero-note-small">Each project has its own point of view.</span>
@@ -41,7 +41,7 @@ export default function WorkPage() {
           <SectionHeading
             eyebrow="Selected projects"
             title={<span id="all-projects-title">A range of digital work<span className="heading-period">.</span></span>}
-            description="Concept previews are clearly marked where a live capture was not available. Follow a project link to explore the supplied deployment."
+            description="Captured screenshots appear where available; other visuals are clearly marked as illustrative placeholders. Follow each link to explore its supplied deployment."
           />
           <ProjectGrid projects={projects} variant="work" />
         </div>

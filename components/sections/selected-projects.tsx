@@ -20,7 +20,7 @@ export function SelectedProjects() {
         </div>
         <ProjectGrid projects={selectedProjects} variant="home" />
         <div className="projects-bottom-cta">
-          <span>Seven distinct ideas. One thoughtful approach.</span>
+          <span>Eight distinct ideas. One thoughtful approach.</span>
           <Link className="text-link" href="/work">See all work <ArrowRight aria-hidden="true" size={16} /></Link>
         </div>
       </div>
