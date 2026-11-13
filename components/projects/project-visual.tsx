@@ -30,6 +30,13 @@ const visualCopy: Record<Exclude<ProjectVisualKind, "algorithm">, { brand: strin
     note: "A considered product interface.",
     action: "Open workspace",
   },
+  "ux-booster": {
+    brand: "UXBOOSTER",
+    eyebrow: "PRODUCT EXPERIENCE DASHBOARD",
+    headline: "A clearer view of the work.",
+    note: "An illustrative product dashboard preview.",
+    action: "Open dashboard",
+  },
   creator: {
     brand: "LUMORA AI / CLIPWIZARD",
     eyebrow: "YOUR CREATIVE STUDIO",
@@ -47,9 +54,9 @@ const visualCopy: Record<Exclude<ProjectVisualKind, "algorithm">, { brand: strin
 }
 
 function IllustrativeScene({ kind }: { kind: Exclude<ProjectVisualKind, "algorithm"> }) {
-  if (kind === "dashboard") {
+  if (kind === "dashboard" || kind === "ux-booster") {
     return (
-      <div className="concept-scene concept-scene--dashboard">
+      <div className={`concept-scene concept-scene--${kind}`}>
         <div className="dashboard-sidebar"><i /><i /><i /><i /></div>
         <div className="dashboard-main">
           <div className="dashboard-metrics"><i /><i /><i /></div>
@@ -160,7 +167,7 @@ export function ProjectVisual({ project }: { project: PortfolioProject }) {
           <div className="concept-bottomline"><span>BUILT AROUND THE EXPERIENCE</span><span>01 / 03</span></div>
         </div>
       </div>
-      <span className="project-visual-label">Illustrative concept preview</span>
+      <span className="project-visual-label">{project.previewLabel ?? "Illustrative concept preview"}</span>
     </div>
   )
 }

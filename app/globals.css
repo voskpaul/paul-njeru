@@ -5379,6 +5379,14 @@ p {
   background: radial-gradient(ellipse at 82% 12%, rgba(139, 92, 246, 0.42), transparent 45%), linear-gradient(145deg, #20243b, #171b2d 58%, #28364b);
 }
 
+.project-visual--ux-booster {
+  background: radial-gradient(ellipse at 78% 15%, rgba(53, 214, 232, 0.22), transparent 42%), linear-gradient(145deg, #17283b, #20243b 55%, #282244);
+}
+
+.concept-scene--ux-booster {
+  background: linear-gradient(145deg, #20253a, #2b2b50 56%, #253d50);
+}
+
 .project-visual--creator {
   background: radial-gradient(ellipse at 84% 12%, rgba(139, 92, 246, 0.42), transparent 44%), linear-gradient(145deg, #29213f, #34274c 56%, #263b51);
 }

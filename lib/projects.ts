@@ -3,6 +3,7 @@ export type ProjectVisualKind =
   | "real-estate"
   | "hospitality"
   | "dashboard"
+  | "ux-booster"
   | "creator"
   | "algorithm"
   | "commerce"
@@ -70,6 +71,18 @@ export const projects: PortfolioProject[] = [
     visual: "hospitality",
     tech: [],
     statusLabel: "Website concept",
+  },
+  {
+    id: "ux-booster",
+    name: "UXBooster",
+    category: "UX productivity dashboard / web application",
+    description:
+      "A UX-focused product dashboard project, linked directly to its deployed dashboard route.",
+    href: "https://uxbooster-pdtv1kj33-voskpauls-projects.vercel.app/dashboard",
+    visual: "ux-booster",
+    tech: [],
+    previewLabel: "Illustrative placeholder",
+    statusLabel: "Access-protected deployment",
   },
   {
     id: "vizify",
