@@ -22,6 +22,7 @@ export type PortfolioProject = {
   visual: ProjectVisualKind
   tech: string[]
   image?: string
+  imageFallback?: string
   imageAlt?: string
   previewLabel?: string
   statusLabel: string
@@ -81,7 +82,10 @@ export const projects: PortfolioProject[] = [
     href: "https://uxbooster-pdtv1kj33-voskpauls-projects.vercel.app/dashboard",
     visual: "ux-booster",
     tech: [],
-    previewLabel: "Illustrative placeholder",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%20%28444%29-YHDMLqdhhsxVnKJszrTYNozgWZQ66I.png",
+    imageFallback: "/projects/uxbooster-dashboard.png",
+    imageAlt: "UXBooster analytics dashboard screenshot showing a dark workspace with navigation, summary metrics, a user activity chart, and traffic sources",
+    previewLabel: "Screenshot provided by Paul",
     statusLabel: "Access-protected deployment",
   },
   {

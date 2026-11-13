@@ -1,4 +1,7 @@
+"use client"
+
 import Image from "next/image"
+import { useState } from "react"
 import type { PortfolioProject, ProjectVisualKind } from "@/lib/projects"
 
 const visualCopy: Record<Exclude<ProjectVisualKind, "algorithm">, { brand: string; eyebrow: string; headline: string; note: string; action: string }> = {
@@ -121,14 +124,21 @@ function IllustrativeScene({ kind }: { kind: Exclude<ProjectVisualKind, "algorit
 }
 
 export function ProjectVisual({ project }: { project: PortfolioProject }) {
+  const [imageSource, setImageSource] = useState(project.image ?? "")
+
   if (project.image) {
     return (
       <div className={`project-visual project-visual--image project-visual--${project.visual}`}>
         <Image
-          src={project.image}
+          src={imageSource}
           alt={project.imageAlt ?? `${project.name} website preview`}
           fill
           sizes="(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 60vw"
+          onError={() => {
+            if (project.imageFallback && imageSource !== project.imageFallback) {
+              setImageSource(project.imageFallback)
+            }
+          }}
         />
         <span className="project-visual-label">{project.previewLabel}</span>
       </div>
